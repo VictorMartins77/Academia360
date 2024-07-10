@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import Home from './pages/home/index'
 import bannerImage from './assets/img/banner.svg'; // Importe sua imagem
-import GlobalStyle from './styles/global  ';
+import GlobalStyle from './styles/global';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
