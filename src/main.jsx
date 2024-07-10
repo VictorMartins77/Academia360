@@ -8,13 +8,8 @@ import GlobalStyle from './styles/global';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <GlobalStyle />
-     <div className="app"  style={{
-        backgroundImage: `url(${bannerImage})`,
-        backgroundSize: 'cover',
-        /* Outras propriedades de estilo, se necessário */
-      }}>
-     <Home />
+    <div className="Bannner" style={{ backgroundImage: `url(${bannerImage})`, backgroundSize: 'cover', height: '100vh' }}>
+      <Home />
     </div>
-    
   </React.StrictMode>,
-)
+);

@@ -12,15 +12,14 @@ export const Navigation = styled.nav`
   display: flex;
   flex-grow: 1; 
   justify-content: center; 
-margin-right:200px;
 > ul{
     color: white;
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 40px;
     
     font-weight: 600;
-    font-size: 22px;
+    font-size: 20px;
 
     @media (max-width: 1157px) {
     gap: 30px;
@@ -38,7 +37,7 @@ ul li{
 }
 
 ul li:hover{
-    color: #E4AC46;
+    color: #ff4601; /* Text color on hover */
     transition: 0.3s;
 }
 
@@ -48,7 +47,7 @@ ul li::after{
     display: block;
     height: 0.2rem;
     width: 0%;
-    background: #E4AC46;
+    background: #ff4601;
     bottom: -0.5rem;
     transition: all ease-in-out 250ms;
 }
@@ -59,6 +58,7 @@ ul li:hover::after{
 `;
 
 export const Logo = styled.img`
-  max-width: 140px; /* Defina o tamanho desejado */
-  height: auto; /* Mantém a proporção */
+  max-width: 160px;
+  height: auto; 
+  margin-left:50px;
 `;

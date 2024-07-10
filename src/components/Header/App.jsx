@@ -1,6 +1,9 @@
+
+
 import React from 'react';
 import { Content, Navigation, Logo } from './styles';
 import Academia from '../../assets/img/ACADEMIA.png';
+import OrangeButton from '../../components/OrangeButton/App';
 
 function Header() {
   return (
@@ -14,7 +17,7 @@ function Header() {
           <li>Nossos planos</li>
         </ul>
       </Navigation>
-      <button>Contate-nos</button>
+      <OrangeButton/>
     </Content>
   );
 }
