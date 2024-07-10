@@ -17,7 +17,7 @@ function Header() {
           <li>Nossos planos</li>
         </ul>
       </Navigation>
-      <OrangeButton/>
+      <OrangeButton buttonText="Contacte-nos!"/>
     </Content>
   );
 }

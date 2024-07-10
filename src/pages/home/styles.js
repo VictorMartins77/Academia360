@@ -4,7 +4,7 @@ import {font} from "../../assets/theme/theme";
 
 
 export const Content = styled.div`
-margin-top:208px;
+margin-top:150px;
 margin-left:120px;
 color:white;
 width:494px;
@@ -18,17 +18,22 @@ export const Container = styled.div`
 
 
 export const OrangeTitle = styled.span`
-  color:#ff4601
+  color:#ff4601;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
 `;
 
 export const Titulo = styled.h1`
-  font-size:45px;
+  font-size: 45px;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+  color: white;
 `;
 
 export const Texto = styled.div`
   margin-top:35px;
-  margin-bottom:35px;
-  font-size:18px;
+  margin-bottom:55px;
+  font-size:20px;
   width:683px;
   height:93px;  
 `;

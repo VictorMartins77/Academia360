@@ -1,10 +1,10 @@
 import React from 'react';
 import { Button } from './styles';
 
-const OrangeButton = () => {
+const OrangeButton = ({ buttonText }) => {
     return (
       <div>
-        <Button>Contate-nos</Button>
+        <Button>{buttonText}</Button>
       </div>
     );
   };

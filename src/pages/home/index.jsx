@@ -17,7 +17,7 @@ function Home() {
           <Texto>
           <p>Maximize sua experiência na academia Elevamos sua jornada fitness com nosso sistema abrangente de gerenciamento de academia. Registre membros sem esforço, rastreie pagamentos de forma impecável, personalize planos de treino, monitore o progresso meticulosamente, atribua treinadores pessoais e muito mais.</p>
           </Texto>
-          <OrangeButton/>
+          <OrangeButton buttonText="Começe!"/>
       </Content>
     </Container>
   );
