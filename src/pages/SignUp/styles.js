@@ -30,11 +30,11 @@ export const Content = styled.div`
   margin-bottom:0;
   overflow: hidden;
   color:white;
-  margin-bottom:200px;
+  margin-bottom:50px;
 `;
 
 export const Title = styled.p`
-font-size: 34px;
+font-size: 25px;
 margin-bottom: 15px;
 width:313px;
 `;
@@ -47,14 +47,11 @@ font-size:15px;
 `;
 export const Span = styled.span`
 color: #EA454C;
-border-bottom: 1px solid #EA454C;
-display: inline-block;
+`;
+export const Link = styled.p`
+margin-left:12px;
 `;
 
-
-export const Link = styled.link`
-font-size:50px;
-`;
 
 export const Entrar = styled.button`
   border-radius: 10px;

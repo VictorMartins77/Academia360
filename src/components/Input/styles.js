@@ -13,7 +13,6 @@ export const Container = styled.div`
   > input {
     height: 41px;
     width: 313px;
-    padding: 30px;
     color: #4B5563;
     background: transparent;
     border: 0;
@@ -30,5 +29,6 @@ export const Container = styled.div`
 
   > svg {
     margin-left: 16px;
+    margin-right:16px;
   }
 `;
