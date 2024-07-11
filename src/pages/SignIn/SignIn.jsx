@@ -1,30 +1,42 @@
 import React from 'react';
-import {Container} from './styles';
+import {Container,Buttons,Rightside,Content,Title,InputTitle,Entrar,Linha,Span,Link} from './styles';
 import { Input } from '../../components/Input';
 import { FaUser, FaLock } from 'react-icons/fa';
-
+import ImgRight from '../../assets/img/rightside.svg';
+import GoogleButton from 'react-google-button'
 
 function SignIn() {
   return (
     <Container>
-     <h1>Bem Vindo de volta!</h1>
-     <p>Bem vindo de volta! Por favor preencha seus dados.</p>
-     <p>E-mail</p>
-     <Input
-            type="email"
-            placeholder="Preencha seu e-mail"
-            icon={FaUser}
-          />
-     <p>Senha</p>
-     <Input
-            type="password"
-            placeholder="*******"
-            icon={FaLock}
-          />
-          <button>Entrar</button>
-          <button>Entre com o Google</button>
-          <p>Não tem uma conta? Crie aqui</p>
-    </Container>
+
+      <Content>
+          <Title>Bem Vindo de volta!</Title>
+          <InputTitle>E-mail</InputTitle>
+          <Input
+                  type="email"
+                  placeholder="Preencha seu e-mail"
+                  icon={FaUser}
+                />
+          <InputTitle>Senha</InputTitle>
+          <Input
+                  type="password"
+                  placeholder="*******"
+                  icon={FaLock}
+                />
+                <Buttons>
+                    <Entrar>Entrar</Entrar>
+                    <GoogleButton
+                      type="light"
+                      onClick={() => { console.log('Google button clicked') }}
+                      style={{width: '313px' }} // Adjust values as needed
+                    />
+                </Buttons>
+                    {/* <Linha>OU</Linha> */}
+                    <Link>Não tem uma conta?<Span>  Crie sua conta aqui</Span></Link>
+                    
+        </Content>
+        <Rightside src={ImgRight} alt="Imagem da direita" />
+      </Container>
   );
 }
 

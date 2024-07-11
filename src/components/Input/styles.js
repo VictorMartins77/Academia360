@@ -1,34 +1,34 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Container = styled.div`
+  height: 41px;
+  width: 313px;
+  display: flex;
+  align-items: center;
+
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+
+  > input {
     height: 41px;
     width: 313px;
-    display: flex;
-    align-items: center;
-
-    background-color: #E8E8E0;
+    padding: 30px;
     color: #4B5563;
+    background: transparent;
+    border: 0;
 
-    border-radius: 10px;
-    
-
-    > input{
-        height: 41px;
-        width: 313px;
-        
-        
-
-        padding: 30px;
-
-        color: #4B5563;
-        background: transparent;
-        border: 0;
-
-        &:placeholder{
-            color: #52555A;
-        }
+    &:placeholder {
+      color: #52555A;
     }
-    > svg{
-            margin-left: 16px;
-        }
+
+    /* New rule to remove focus outline */
+    &:focus {
+      outline: none;
+    }
+  }
+
+  > svg {
+    margin-left: 16px;
+  }
 `;
