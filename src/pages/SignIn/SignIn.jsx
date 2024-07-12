@@ -5,9 +5,14 @@ import { FaUser, FaLock } from 'react-icons/fa';
 import ImgRight from '../../assets/img/rightside.svg';
 import GoogleButton from 'react-google-button'
 import { Link } from 'react-router-dom';
-import { useSignInWithEmailAndPassword} from 'react-firebase-hooks/auth';
+import { signInWithEmailAndPassword} from 'firebase/auth';
 import { auth } from '../../services/firebaseConfig';
 import { useState } from "react";
+import { toast,ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+import { GoogleLogin } from '@react-oauth/google';
+import { jwtDecode } from "jwt-decode";
+
 
 
 function SignIn() {
@@ -15,25 +20,26 @@ function SignIn() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-
-  const [signInWithEmailAndPassword, user, loading, error] =
-  useSignInWithEmailAndPassword(auth);
-
-  function handleSignIn(e){
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    signInWithEmailAndPassword(email, password);
-  }
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      console.log("User logged in Successfully");
+      toast.success("User logged in Successfully", {
+        position: "top-center",
+      });
+    } catch (error) {
+      console.log(error.message);
 
-  if (loading) {
-    return <p>carregando...</p>;
-  }
-  if (user) {
-    return console.log(user);
-  }
+      toast.error(error.message, {
+        position: "top-center",
+      });
+    }
+  };
 
   return (
     <Container>
-
+      <ToastContainer/>
       <Content>
           <Title>Bem Vindo de volta!</Title>
           <InputTitle>E-mail</InputTitle>
@@ -51,11 +57,19 @@ function SignIn() {
                   onChange={e=>setPassword(e.target.value)}
                 />
                 <Buttons>
-                    <Entrar onClick={handleSignIn}>Entrar</Entrar>
-                    <GoogleButton
-                      type="light"
-                      onClick={() => { console.log('Google button clicked') }}
-                      style={{width: '313px' }} // Adjust values as needed
+                    <Entrar onClick={handleSubmit}>Entrar</Entrar>
+                    <GoogleLogin
+                          onSuccess={(credentialResponse) => {
+                            const credentialResponseDecoded = jwtDecode(credentialResponse.credential);
+                            console.log(credentialResponseDecoded);
+                          }}
+                          onError={() => {
+                            console.log('Login Failed');
+                          }}
+                          style={{
+                            height: '41px',
+                            width: '313px',
+                          }}                    
                     />
                 </Buttons>
                 <Link to="/register" style={{ textDecoration: 'none', color:'white'}}>Não tem uma conta?<Span>  Crie sua conta aqui</Span></Link>
