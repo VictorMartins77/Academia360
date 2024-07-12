@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import {font} from "../../assets/theme/theme";
+import bannerImage from '../../assets/img/banner.svg';
 
 
 
@@ -12,9 +13,11 @@ height:218px;
 `;
 
 export const Container = styled.div`
-
-  
-  `;
+  background-image: url(${bannerImage});
+  background-size:cover;
+  background-repeat:no-repeat;
+  height:100vh
+`;
 
 
 export const OrangeTitle = styled.span`
@@ -33,7 +36,7 @@ export const Titulo = styled.h1`
 export const Texto = styled.div`
   margin-top:35px;
   margin-bottom:55px;
-  font-size:20px;
+  font-size:22px;
   width:683px;
   height:93px;  
 `;
