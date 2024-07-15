@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import {font} from "../../assets/theme/theme";
-import bannerImage from '../../assets/img/banner.svg';
+import bannerImage from '../../assets/img/banner.png';
 
 
 
@@ -16,7 +16,7 @@ export const Container = styled.div`
   background-image: url(${bannerImage});
   background-size:cover;
   background-repeat:no-repeat;
-  height:100vh
+  height:100vh;
 `;
 
 
