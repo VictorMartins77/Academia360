@@ -8,9 +8,9 @@ import Section2 from '../../components/Section2';
 
 function Home() {
   return (
-    <Container>
-      <Section1/>
-      <Section2/>
+    <Container style={{ display: 'flex', flexDirection: 'column' }}>
+      <Section1 style={{ marginBottom: 0, padding: 0 }} />
+      <Section2 style={{ marginTop: 0, padding: 0 }} />
     </Container>
   );
 }

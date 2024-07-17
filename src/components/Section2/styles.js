@@ -4,40 +4,64 @@ import bannerImage from '../../assets/img/banner.png';
 
 
 
-export const Content = styled.div`
-margin-top:150px;
-margin-left:120px;
-color:white;
-width:494px;
-height:218px;
+export const Content1 = styled.div`
+display: flex;
+align-items: center;
+margin-top:100px;
+margin-left:170px;
 `;
 
 export const Container = styled.div`
-  background-image: url(${bannerImage});
-  background-size:cover;
-  background-repeat:no-repeat;
-  height:100vh;
+background-color:#18171a;
+margin-top:400px;
 `;
 
 
-export const OrangeTitle = styled.span`
-  color:#ff4601;
-  font-family: 'Orbitron', sans-serif;
-  font-weight: bold;
+export const Card = styled.div`
+  color: #d1d1d1;
+  display: flex;
+  flex-direction: column; /* Adicione esta linha para alinhar verticalmente os elementos */
+  position:relative;
+`;
+
+export const CardText = styled.p`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  top: 50%;
+  transform: translate(-50%, -50%);
+`;
+
+export const Texts = styled.div`
+  display: flex;
+align-items:center;
 `;
 
 export const Titulo = styled.h1`
-  font-size: 45px;
-  font-family: 'Orbitron', sans-serif;
-  font-weight: bold;
+  font-size: 40px;
+  font-family: 'Outfit', SemiBold;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top:85px;
 `;
 
-export const Texto = styled.div`
-  margin-top:35px;
-  margin-bottom:55px;
-  font-size:22px;
-  width:683px;
-  height:93px;  
+export const ExerciseName = styled.h1`
+  font-family: 'Outfit', Regular;
+  margin-right:58px;
 `;
 
+export const ExerciseText = styled.p`
+  font-family: 'Outfit', Light;
+  font-size:16px;
+  max-width:370px;
+  margin-top:10px;
+`;
+
+export const Exercicio = styled.img`
+margin-right:220px;
+`;
